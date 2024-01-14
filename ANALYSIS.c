@@ -1,0 +1,100 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+    int x;
+    float irp,nrp;
+    float dr,ir1,ir7=0,ir10=0,ir15=0,ir30=0;
+    float na1=0,na7=0,na10=0,na15=0,na30=0,na246=0;
+    float ira1=0,ira7=0,ira10=0,ira15=0,ira30=0,ira246=0;
+    float nr1=0,nr7=0,nr10=0,nr15=0,nr30=0,nr246=0;
+    printf("Enter amount: ");
+    scanf("%d",&x);
+    printf("Enter increased percentage rate of 1 day: ");
+    scanf("%f",&dr);
+    ir1= 5 * dr;
+    printf("Entered rate = %.2f\n",dr);
+    int i;
+    irp=ir1/100;
+    ira1=x+(x*irp);
+    printf("\nINTRADAY TRADING ANALYSIS:- \n\n");
+    printf("Intraday 1 day return amount = %.2f (profit= +%.1f rs/ +%.2f %)\n",ir1,ira1-x,ir1);
+    ira7=x;
+    for(i=1;i<=5;i++)
+    {
+        ira7+=(ira7*irp);
+    }
+    ir7=((ira7-x)/x)*100;
+    printf("intraday 7 day return amount = %.2f (profit= +%.1f rs/ +%.2f %)\n",ira7,ira7-x,ir7);
+    ira10=x;
+    for(i=1;i<=8;i++)
+    {
+        ira10+=(ira10*irp);
+    }
+    ir10=((ira10-x)/x)*100;
+    printf("Intraday 10 day return amount = %.2f (profit= +%.1f rs/ +%.2f %)\n",ira10,ira10-x,ir10);
+    ira15=x;
+    for(i=1;i<=11;i++)
+    {
+        ira15+=(ira15*irp);
+    }
+    ir15=((ira15-x)/x)*100;
+    printf("Intraday 15 day return amount = %.2f (Profit= +%.1f rs/ +%.2f %)\n",ira15,ira15-x,ir15);
+    ira30=x;
+    for(i=1;i<=22;i++)
+    {
+        ira30+=(ira30*irp);
+    }
+    ir30=((ira30-x)/x)*100;
+    printf("Intraday 30 day return amount = %.2f (Profit= +%.1f rs/ +%.2f %)\n",ira30,ira30-x,ir30);
+    printf("\n");
+    // ------BELOW CODE WAS FOR 1 YEAR INTRADAY PROFIT BUT I WAS TOO HUGE THAN EVER ANYONE COULD EXPECT THUS NOT INCLUDED IN CODE 
+    /*ira246=x;
+    for(i=1;i<=246;i++)
+    {
+        ira246+=(ira246*irp);
+    }
+    printf("Intraday 1 Year return amount = %.2f\n",ira246);*/
+    // PLEASE IGNORE THE ABOVE COMMENT
+    // normal profits from here--------------
+    nrp=dr/100;
+    na1= x+(x*nrp);
+    printf("Delivery profits below:-\n\n");
+    nr1=((na1-x)/x)*100;
+    printf("Delivery1 day return amount = %.2f (profit= +%.1f rs/ +%.2f %)\n",na1,na1-x,nr1);
+    na7=x;
+    for(i=1;i<=5;i++)
+    {
+        na7+=(na7*nrp);
+    }
+    nr7=((na7-x)/x)*100;
+    printf("Delivery 7 day return amount = %.2f(Profit= +%.1f rs/ +%.2f %)\n",na7,na7-x,nr7);
+    na10=x;
+    for(i=1;i<=8;i++)
+    {
+        na10+=(na10*nrp);
+    }
+    nr10=((na10-x)/x)*100;
+    printf("Delivery 10 day return amount = %.2f(Profit= +%.1f rs/ +%.2f %)\n",na10,na10-x,nr10);
+    na15=x;
+    for(i=1;i<=11;i++)
+    {
+        na15+=(na15*nrp);
+    }
+    nr15=((na15-x)/x)*100;
+    printf("Delivery 15 day return amount = %.2f(Profit= +%.1f rs/ +%.2f %)\n",na15,na15-x,nr15);
+    na30=x;
+    for(i=1;i<=22;i++)
+    {
+        na30+=(na30*nrp);
+    }
+    nr30=((na30-x)/x)*100;
+    printf("Delivery 30 day return amount = %.2f(Profit= +%.1f rs/ +%.2f %)\n",na30,na30-x,nr30);
+    na246=x;
+    for(i=1;i<=246;i++)
+    {
+        na246+=(na246*nrp);
+    }
+    nr246=((na246-x)/x)*100;
+    printf("Delivery 1 Year return amount = %.2f(Profit= %.1f rs/ +%.2f %)\n",na246,na246-x,nr246);
+    printf("\nProgram succesfully completed.....");
+}
